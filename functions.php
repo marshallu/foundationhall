@@ -265,13 +265,13 @@ add_shortcode('efscolumn', 'mu_efs_tw_column_shortcode');
  */
 function mu_efs_tw_button( $params, $content = null) {
 
-	$data = shortcode_atts(array(
+	$data = shortcode_atts( array(
 		'class' => '',
 		'title' => '',
 		'link' => '',
 		'color' => 'orange',
 	),
-	$params);
+	$params );
 
 	return '<a class="btn btn-' . esc_attr( $data['color'] ) . ' my-3 ' . esc_attr( $data['class'] ). '" href="' . esc_url( $data['link'] ) . '">' . esc_attr( $data['title'] ) . '</a>';
 
@@ -279,58 +279,42 @@ function mu_efs_tw_button( $params, $content = null) {
 
 add_shortcode( 'efsbutton', 'mu_efs_tw_button' );
 
-function mu_youtube($atts, $content = null)
+function mu_youtube( $atts, $content = null )
 {
-	extract(shortcode_atts(array(
+	$data = shortcode_atts( array(
 		'youtube_id' => '',
 		'id' => '',
 		'text' => 'Play Video',
 		'class' => '',
 		'type' => 'embed'
-	), $atts));
+	),
+	$atts );
 
-	if ($youtube_id) {
-		$id = $youtube_id;
-	}
-
-	if ($type == 'link') {
-		$html = '<a href="https://www.youtube.com/watch?v=' . esc_attr($id) . '" class="' . esc_attr($class) . '">';
-		$html .= '<div class="h-full w-full relative bg-no-repeat bg-cover" style="padding-bottom: 56.25%; height: 0; background-image: url(http://i3.ytimg.com/vi/' . $id . '/maxresdefault.jpg);">';
-		$html .= '<div class="cursor-pointer absolute inset-0 bg-black-overlay-40 lg:bg-black-overlay-40 hover:bg-green-overlay-40 flex flex-col pt-8">';
-		$html .= '<div class="flex items-center px-4 text-white">';
-		$html .= '<svg class="fill-current h-8 w-8 lg:h-10 lg:w-10 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>';
-		$html .= '<span class="text-xl lg:text-2xl font-semibold uppercase text-shadow-strong">' . esc_attr($text) . '</span>';
-		$html .= '</div>';
-		$html .= '</div>';
-		$html .= '</div>';
-		$html .= '</a>';
-	} elseif ($type == 'embed') {
-		$html = '<div class="relative h-0 ' . esc_attr($class) . '" style="padding-bottom: 56.25%;">';
-		$html .= '<iframe class="absolute top-0 left-0 h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/' . esc_attr($id) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-		$html .= '</div>';
-	}
-
+	$html = '<div class="relative h-0 ' . esc_attr( $data['class'] ) . '" style="padding-bottom: 56.25%;">';
+	$html .= '<iframe class="absolute top-0 left-0 h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/' . esc_attr( $data['id'] ) . '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+	$html .= '</div>';
 	return $html;
 }
-add_shortcode('mu_youtube', 'mu_youtube');
+add_shortcode( 'mu_youtube', 'mu_youtube' );
 
-function mu_trumba_calendar($atts)
+function mu_trumba_calendar( $atts )
 {
-	$data = shortcode_atts(array(
+	$data = shortcode_atts( array(
 		'webname' => 'Marshall',
 		'type' => 'main',
 		'config' => '',
 		'teaser' => ''
-	), $atts);
+	),
+	$atts );
 
 	$output = '<div id="trumba-calendar">';
 	$output .= '<script type="text/javascript" src="//www.trumba.com/scripts/spuds.js"></script>';
 	$output .= '<script type="text/javascript">';
 	$output .= '$Trumba.addSpud({';
-	$output .= 'webName: "' . esc_attr($data['webname']) . '",';
-	$output .= 'spudType : "' . esc_attr($data['type']) . '",';
-	$output .= 'spudConfig : "' . esc_attr($data['config']) . '",';
-	$output .= 'teaserBase : "' . esc_attr($data['teaser']) . '" });';
+	$output .= 'webName: "' . esc_attr( $data['webname'] ) . '",';
+	$output .= 'spudType : "' . esc_attr( $data['type'] ) . '",';
+	$output .= 'spudConfig : "' . esc_attr( $data['config'] ) . '",';
+	$output .= 'teaserBase : "' . esc_attr( $data['teaser'] ) . '" });';
 	$output .= '</script>';
 	$output .= '<noscript>Your browser must support JavaScript to view this content. ';
 	$output .= 'Please enable JavaScript in your browser settings then try again.</noscript>';
