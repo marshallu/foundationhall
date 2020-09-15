@@ -43,15 +43,8 @@
                 <a href="mailto:foundation@marshall.edu" class="underline text-white hover:text-white hover:no-underline">foundation@marshall.edu</a>
             </div>
         </div>
-        <div class="flex flex-wrap justify-between mt-8 mb-8">
-            <div class="hidden lg:flex lg:w-1/2 text-center lg:text-left">
-                <?php
-                    wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu' => 'Footer', 'menu_class' => 'footer-menu', ) );
-                ?>
-            </div>
-            <div class="w-full lg:w-1/2 text-xs text-white text-center lg:text-right px-6 lg:px-0">
-                <?php echo date("Y"); ?> Marshall University Foundation - 519 John Marshall Drive - Huntington, WV 25703
-            </div>
+        <div class="mt-8 mb-8">
+            <?php echo date("Y"); ?> Marshall University Foundation - 519 John Marshall Drive - Huntington, WV 25703
         </div>
     </div>
 </footer>
