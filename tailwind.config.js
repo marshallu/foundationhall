@@ -106,11 +106,11 @@ module.exports = {
           borderRadius: theme('borderRadius.default'),
           borderWidth: theme('borderWidth.default'),
           fontSize: theme('fontSize.lg'),
-          textDecoration: 'no-underline !important'
+          textDecoration: 'none!important'
         },
         '.btn-orange': {
           backgroundColor: theme('colors.orange'),
-          color: `${theme('colors.white')} !important`,
+          color: `${theme('colors.white')}!important`,
           borderColor: theme('colors.black'),
           '&:hover': {
             backgroundColor: theme('colors.white'),
