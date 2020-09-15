@@ -110,7 +110,7 @@ module.exports = {
         },
         '.btn-orange': {
           backgroundColor: theme('colors.orange'),
-          color: theme('colors.white'),
+          color: `${theme('colors.white')} !important`,
           borderColor: theme('colors.black'),
           '&:hover': {
             backgroundColor: theme('colors.white'),
