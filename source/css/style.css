@@ -29,6 +29,10 @@ ul.primary_nav li a:hover {
     @apply bg-darker-brown;
 }
 
+ul.primary_nav li.current_page_item a {
+    @apply bg-orange text-white;
+}
+
 /* purgecss start ignore */
 .columns {
     @apply px-2;
