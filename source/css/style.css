@@ -30,7 +30,7 @@ ul.primary_nav li a:hover {
 }
 
 ul.primary_nav li.current_page_item a {
-    @apply bg-orange text-white;
+    @apply bg-light-brown text-white;
 }
 
 /* purgecss start ignore */
