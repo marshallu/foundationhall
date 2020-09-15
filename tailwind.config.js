@@ -98,7 +98,8 @@ module.exports = {
           padding: `${theme('spacing.3')} ${theme('spacing.5')}`,
           borderRadius: theme('borderRadius.default'),
           borderWidth: theme('borderWidth.default'),
-          fontSize: theme('fontSize.lg')
+          fontSize: theme('fontSize.lg'),
+          textDecoration: 'no-underline !important'
         },
         '.btn-orange': {
           backgroundColor: theme('colors.orange'),
