@@ -116,4 +116,12 @@ x-cloak {
 .entry-content h3 {
     @apply font-sans text-darker-brown font-semibold;
 }
+
+footer ul {
+    @apply flex text-xs text-white underline;
+}
+
+footer ul li {
+    @apply mx-2;
+}
 /* purgecss end ignore */

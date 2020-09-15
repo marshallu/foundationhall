@@ -46,7 +46,7 @@
         <div class="flex flex-wrap justify-between mt-8 mb-8">
             <div class="hidden lg:flex lg:w-1/2 text-center lg:text-left">
                 <?php
-                    wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu' => 'Footer', 'menu_class' => 'flex text-xs text-white space-x-2 underline', ) );
+                    wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu' => 'Footer', 'menu_class' => 'footer-menu', ) );
                 ?>
             </div>
             <div class="w-full lg:w-1/2 text-xs text-white text-center lg:text-right px-6 lg:px-0">
