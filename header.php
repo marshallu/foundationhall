@@ -35,11 +35,11 @@
 
 		<header class="bg-repeat pt-8" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/darkbg.png)">
 			<div class="w-full xl:max-w-screen-xl px-6 lg:px-10 xl:px-0 xl:mx-auto bg-white flex pt-4">
-				<div class="w-full lg:w-2/3 lg:pl-1 lg:pr-12 lg:pb-1"><img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="Brad D. Smith Foundation Hall logo" /></div>
+				<div class="w-full lg:w-2/3 lg:pl-1 lg:pr-12 lg:pb-1"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="Brad D. Smith Foundation Hall logo" /></a></div>
 				<div class="hidden lg:flex lg:w-1/3 text-xs justify-between pr-4">
-					<div><a href="#" class="border-t-2 border-green text-gray pt-1">MU Homepage</a></div>
-					<div><a href="#" class="border-t-2 border-dark-green text-gray pt-1">MU Alumni Association</a></div>
-					<div><a href="#" class="border-t-2 border-light-green text-gray pt-1">MU Alumni Foundation</a></div>
+					<div><a href="http://www.marshall.edu" class="border-t-2 border-green text-gray pt-1">MU Homepage</a></div>
+					<div><a href="http://www.marshall.edu/foundation/" class="border-t-2 border-dark-green text-gray pt-1">MU Foundation</a></div>
+					<div><a href="https://www.herdalum.com/" class="border-t-2 border-light-green text-gray pt-1">MU Alumni Association</a></div>
 				</div>
 			</div>
 		</header>
