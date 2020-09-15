@@ -114,7 +114,7 @@ module.exports = {
           borderColor: theme('colors.black'),
           '&:hover': {
             backgroundColor: theme('colors.white'),
-            color: theme('colors.orange')
+            color: `${theme('colors.orange')}!important`,
           },
         }
       }
