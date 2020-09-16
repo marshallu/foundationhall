@@ -323,3 +323,24 @@ function mu_trumba_calendar( $atts )
 	return $output;
 }
 add_shortcode( 'mu_trumba', 'mu_trumba_calendar' );
+
+function mu_fh_home_item( $atts, $content = null )
+{
+	$data = shortcode_atts( array(
+		'title' => '',
+		'link' => '',
+		'button_text' => '',
+		'width' => '1/3'
+	),
+	$atts );
+
+
+	$output = '<div class="bg-darker-brown text-white py-2 lg:py-6 w-full lg:w-' . esc_attr( $data['width'] ) . '">';
+	$output .= '<div>';
+	$output .= do_shortcode( $content );
+	$output .= '</div>';
+	$output .= '<div class="block w-full"><a class="btn btn-orange my-3 w-full lg:w-auto" href="' . esc_url( $data['link'] ) . '">' . esc_attr( $data['button_text'] ) . '</a></div>';
+	$output .= '</div>';
+	return $output;
+}
+add_shortcode( 'mu_fh_home_item', 'mu_fh_home_item' );
